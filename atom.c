@@ -266,7 +266,7 @@ ATOM *atom_alloc(const char* atom_string)
             id++;
             ret->suffixes = realloc(ret->suffixes, sizeof(suffix_ver) * (id + 1));
             if (ret->suffixes == NULL)
-                err("Out of memory error\n");
+                atom_error(ret, E_NOMEM);
             ret->suffixes[id].suffix = SUF_NORM;
             ret->suffixes[id].val = 0;
 
