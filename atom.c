@@ -349,7 +349,6 @@ cmp_code atom_cmp(const ATOM *a1, const ATOM *a2)
 cmp_code atom_cmp_str(const char *s1, const char *s2)
 {
     cmp_code ret;
-    char *ptr;
     ATOM *a1, *a2;
 
     if (!(a1 = atom_alloc(s1)))
@@ -556,7 +555,6 @@ int atom_intersect(const ATOM *a1, const ATOM *a2)
 int atom_intersect_str(const char *s1, const char *s2)
 {
     int ret;
-    char *ptr;
     ATOM *a1, *a2;
 
     if (!(a1 = atom_alloc(s1)))
