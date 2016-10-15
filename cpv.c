@@ -159,7 +159,7 @@ static CPV *cpv_alloc_versioned(const char *cpv_string)
 static CPV *cpv_alloc_unversioned(const char *cpv_string)
 {
     CPV *ret;
-    char *ptr, *tmp_ptr;
+    char *ptr;
     size_t m_len, cpv_len, cpv_string_len;
     ebuild_errno = E_OK;
 
@@ -253,7 +253,6 @@ cmp_code cpv_cmp(const CPV *c1, const CPV *c2)
 cmp_code cpv_cmp_str(const char *s1, const char *s2)
 {
     cmp_code ret;
-    char *ptr;
     CPV *c1, *c2;
 
     if (!(c1 = cpv_alloc(s1, 1)))
