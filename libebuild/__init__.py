@@ -1,2 +1,2 @@
-__all__ = ["cpv", "atom", "version"]
+__all__ = ["exc", "cpv", "atom", "version"]
 __version__ = "0.1.0"

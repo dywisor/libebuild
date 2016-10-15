@@ -1,7 +1,7 @@
 # cython: c_string_type=str, c_string_encoding=ascii
 cimport elib
 from cpython.object cimport Py_LT, Py_LE, Py_EQ, Py_GT, Py_GE, Py_NE
-from pkgcore.ebuild.errors import InvalidCPV
+from libebuild.exc import InvalidCPV
 
 cdef class cpv(object):
     cdef elib.CPV *_cpv

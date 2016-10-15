@@ -1,6 +1,6 @@
 # cython: c_string_type=str, c_string_encoding=ascii
 cimport elib
-from pkgcore.ebuild.errors import InvalidVersion
+from libebuild.exc import InvalidVersion
 
 def version_cmp(v1, v2):
     cdef elib.cmp_code ret = elib.version_cmp(v1, v2)
