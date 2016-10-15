@@ -355,8 +355,10 @@ cmp_code atom_cmp_str(const char *s1, const char *s2)
     if (!(a1 = atom_alloc(s1)))
         return ERROR;
 
-    if (!(a2 = atom_alloc(s2)))
+    if (!(a2 = atom_alloc(s2))) {
+        ret = ERROR;
         goto atom_error;
+    }
 
     ret = atom_cmp(a1, a2);
 
