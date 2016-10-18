@@ -560,8 +560,10 @@ int atom_intersect_str(const char *s1, const char *s2)
     if (!(a1 = atom_alloc(s1)))
         return -1;
 
-    if (!(a2 = atom_alloc(s2)))
+    if (!(a2 = atom_alloc(s2))) {
+        ret = -1;
         goto atom_error;
+    }
 
     ret = atom_intersect(a1, a2);
 
