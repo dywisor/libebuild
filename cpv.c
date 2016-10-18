@@ -262,8 +262,10 @@ cmp_code cpv_cmp_str(const char *s1, const char *s2)
 
     if (!(c2 = cpv_alloc(s2, 1)))
         c2 = cpv_alloc(s2, 0);
-    if (!c2)
+    if (!c2) {
+        ret = ERROR;
         goto cpv_error;
+    }
 
     ret = cpv_cmp(c1, c2);
 
